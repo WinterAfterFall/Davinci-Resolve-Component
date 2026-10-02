@@ -1,0 +1,372 @@
+{
+	Tools = ordered() {
+		NoteBox = GroupOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "NB_Out",
+					Source = "Background",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "NB_ImgPlace",
+					Source = "Foreground",
+					Name = "Image",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "NB_Area",
+					Source = "Switch",
+					Name = "Switch (0 = hidden, 1 = shown)",
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "NB_Title",
+					Source = "StyledText",
+					Name = "Title",
+				},
+				Input3 = InstanceInput {
+					SourceOp = "NB_Info",
+					Source = "StyledText",
+					Name = "Info",
+				},
+				Input4 = InstanceInput {
+					SourceOp = "NB_Area",
+					Source = "ImgWidth",
+					Name = "Image Width (of write area)",
+					Default = 0.85,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "NB_Area",
+					Source = "Gap",
+					Name = "Gap between parts",
+					Default = 0.03,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "NB_Area",
+					Source = "TitleLineH",
+					Name = "Title line height (x Title Size)",
+					Default = 1.2,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "NB_Title",
+					Source = "Size",
+					Name = "Title Size",
+					Default = 0.06,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "NB_Info",
+					Source = "Size",
+					Name = "Info Size",
+					Default = 0.035,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "NB_Area",
+					Source = "Width",
+					Name = "Panel Width",
+					Default = 0.348,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "NB_Out",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 0, 0 },
+				Flags = {
+					AllowPan = false,
+					ConnectedSnap = true,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 716, 265, 358, 24 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				NB_Area = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.826, 0.5 },
+							Expression = "Point(1-Width/2, 0.5)",
+						},
+						Width = Input { Value = 0.348, },
+						Height = Input { Value = 1, },
+						Switch = Input { Value = 1, },
+						ImgWidth = Input { Value = 0.85, },
+						Gap = Input { Value = 0.03, },
+						TitleLineH = Input { Value = 1.2, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, -115.5 } },
+					UserControls = ordered() {
+						Switch = { LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = false, INP_Default = 1, INP_MinScale = 0, INP_MaxScale = 1, INP_MinAllowed = 0, INP_MaxAllowed = 1, ICS_ControlPage = "Controls", LINKS_Name = "Switch" },
+						ImgWidth = { LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = false, INP_Default = 0.85, INP_MinScale = 0, INP_MaxScale = 1, INP_MinAllowed = 0, INP_MaxAllowed = 1, ICS_ControlPage = "Controls", LINKS_Name = "Image Width" },
+						Gap = { LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = false, INP_Default = 0.03, INP_MinScale = 0, INP_MaxScale = 0.2, ICS_ControlPage = "Controls", LINKS_Name = "Gap" },
+						TitleLineH = { LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = false, INP_Default = 1.2, INP_MinScale = 0, INP_MaxScale = 3, ICS_ControlPage = "Controls", LINKS_Name = "Title Line Height" }
+					}
+				},
+				NB_Fill = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "NB_Area",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 108000, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.109803921568627, },
+						TopLeftGreen = Input { Value = 0.109803921568627, },
+						TopLeftBlue = Input { Value = 0.125490196078431, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, -115.5 } },
+				},
+				NB_Shadow = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						Source = Input {
+							SourceOp = "NB_Fill",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 0.598, },
+						shadowAngle = Input { Value = -25, },
+						ShadowDistance = Input { Value = 0.0315, },
+						shadowBlur = Input { Value = 0.677, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, -115.5 } },
+				},
+				NB_Frame = RectangleMask {
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.6645, 0.5 },
+							Expression = "Point(1-NB_Area.Width+Width/2, 0.5)",
+						},
+						Width = Input { Value = 0.025, },
+						Height = Input { Value = 1, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, -49.5 } },
+				},
+				NB_FrameColor = Background {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "NB_Frame",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 108000, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.898039215686275, },
+						TopLeftGreen = Input { Value = 0.694117647058824, },
+						TopLeftBlue = Input { Value = 0.290196078431373, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, -49.5 } },
+				},
+				NB_M1 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "NB_Shadow",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "NB_FrameColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, -49.5 } },
+				},
+				NB_Canvas = Background {
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 108000, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 110, 16.5 } },
+				},
+				NB_ImgPlace = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "NB_Canvas",
+							Source = "Output",
+						},
+						Center = Input {
+							Value = { 0.8385, 0.9 },
+							Expression = "Point(NB_Area.Center.X+NB_Frame.Width/2, 1-(1-NB_Area.ImgWidth)/2*(NB_Area.Width-NB_Frame.Width)*Background.Width/Background.Height-Foreground.Height*Size/Background.Height/2)",
+						},
+						Size = Input {
+							Value = 1,
+							Expression = "NB_Area.ImgWidth*(NB_Area.Width-NB_Frame.Width)*Background.Width/Foreground.Width",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						ImgBottom = Input {
+							Value = 0.8,
+							Expression = "Center.Y-Foreground.Height*Size/Background.Height/2",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 16.5 } },
+					UserControls = ordered() {
+						ImgBottom = { LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_Integer = false, INP_Default = 0, INP_MinScale = 0, INP_MaxScale = 1, ICS_ControlPage = "Controls", LINKS_Name = "Image Bottom (auto)" }
+					}
+				},
+				NB_M2 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "NB_M1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "NB_ImgPlace",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 16.5 } },
+				},
+				NB_Title = TextPlus {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "NB_Area",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 108000, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						StyledText = Input { Value = "Title", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.06, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						Center = Input {
+							Value = { 0.8385, 0.6 },
+							Expression = "Point(NB_Area.Center.X+NB_Frame.Width/2, NB_ImgPlace.ImgBottom-NB_Area.Gap)",
+						},
+						Red1 = Input { Value = 0.894117647058824, },
+						Green1 = Input { Value = 0.67843137254902, },
+						Blue1 = Input { Value = 0.250980392156863, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 82.5 } },
+				},
+				NB_M3 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "NB_M2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "NB_Title",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 82.5 } },
+				},
+				NB_Info = TextPlus {
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "NB_Area",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 108000, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						StyledText = Input { Value = "Info line 1\nInfo line 2", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Regular", },
+						Size = Input { Value = 0.035, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						Center = Input {
+							Value = { 0.8385, 0.5 },
+							Expression = "Point(NB_Area.Center.X+NB_Frame.Width/2, NB_ImgPlace.ImgBottom-NB_Area.Gap-NB_Title.Size*NB_Area.TitleLineH-NB_Area.Gap)",
+						},
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 148.5 } },
+				},
+				NB_M4 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "NB_M3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "NB_Info",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 148.5 } },
+				},
+				NB_Out = Merge {
+					NameSet = true,
+					Inputs = {
+						Foreground = Input {
+							SourceOp = "NB_M4",
+							Source = "Output",
+						},
+						Center = Input {
+							Value = { 0.5, 0.5 },
+							Expression = "Point(0.5+NB_Area.Width*(1-NB_Area.Switch), 0.5)",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 148.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "NoteBox"
+}

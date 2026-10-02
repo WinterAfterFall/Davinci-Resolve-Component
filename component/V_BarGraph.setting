@@ -1,0 +1,1037 @@
+{
+	Tools = ordered() {
+		V_BarGraph = GroupOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "Bar_ImgSlot",
+					Source = "Foreground",
+					Name = "Image",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "HdrAnimation",
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "Visibility",
+					Name = "Visibility (key 0 > 1)",
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "BaseTime",
+					Name = "Baseline Time (per column)",
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "TitleTime",
+					Name = "Image Pop Up Time",
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "GraphTime",
+					Name = "Graph Time",
+					Default = 4,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "HdrValue",
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "Value",
+					Name = "Value",
+					Default = 75,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "Max",
+					Name = "Max",
+					Default = 100,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Controls",
+					Source = "Min",
+					Name = "Min",
+					Default = 0,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "HdrLayout",
+					Default = 1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "Columns",
+					Name = "Columns",
+					Default = 5,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "Position",
+					Name = "Position",
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "Padding",
+					Name = "Bar Gap",
+					Default = 0.4,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "LeftMargin",
+					Name = "Left Margin",
+					Default = 0.1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "RightMargin",
+					Name = "Right Margin",
+					Default = 0.1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "TopMargin",
+					Name = "Top Margin",
+					Default = 0.15,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Layout",
+					Source = "BottomMargin",
+					Name = "Baseline Height",
+					Default = 0.25,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "HdrBar",
+					Default = 1,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Bar_BarColor",
+					Page = "Style",
+					Source = "TopLeftRed",
+					Name = "Bar Color",
+					ControlGroup = 1,
+					Default = 0.0745098039216,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Bar_BarColor",
+					Page = "Style",
+					Source = "TopLeftGreen",
+					ControlGroup = 1,
+					Default = 0.1450980392157,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Bar_BarColor",
+					Page = "Style",
+					Source = "TopLeftBlue",
+					ControlGroup = 1,
+					Default = 0.6392156862745,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "CornerRadius",
+					Name = "Corner Radius",
+					Default = 0.3,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "BorderSize",
+					Name = "Border Size",
+					Default = 0.004,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Bar_BorderColor",
+					Page = "Style",
+					Source = "TopLeftRed",
+					Name = "Border Color",
+					ControlGroup = 4,
+					Default = 0.8823529411765,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Bar_BorderColor",
+					Page = "Style",
+					Source = "TopLeftGreen",
+					ControlGroup = 4,
+					Default = 0.8823529411765,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Bar_BorderColor",
+					Page = "Style",
+					Source = "TopLeftBlue",
+					ControlGroup = 4,
+					Default = 0.8823529411765,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "HdrLabel",
+					Default = 1,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "Bar_Label",
+					Page = "Style",
+					Source = "AutoValue",
+					Name = "Auto Value (count up)",
+					Default = 1,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "Bar_Label",
+					Page = "Style",
+					Source = "ManualText",
+					Name = "Text (Auto off)",
+				},
+				Input30 = InstanceInput {
+					SourceOp = "Bar_Label",
+					Page = "Style",
+					Source = "Font",
+					Name = "Font",
+					ControlGroup = 3,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "Bar_Label",
+					Page = "Style",
+					Source = "Style",
+					Name = "Weight",
+					ControlGroup = 3,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "LabelScale",
+					Name = "Size",
+					Default = 0.55,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "Bar_LabelStroke",
+					Page = "Style",
+					Source = "FontValue",
+					Name = "Stroke Thickness",
+					Default = 0.008,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "LabelGap",
+					Name = "Gap Above Bar",
+					Default = 0.015,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "HdrBaseline",
+					Default = 1,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "ShowBaseline",
+					Name = "Show Baseline",
+					Default = 1,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "BaseFull",
+					Name = "Whole Line",
+					Default = 0,
+				},
+				Input38 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "BaseThickness",
+					Name = "Thickness",
+					Default = 0.006,
+				},
+				Input39 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Style",
+					Source = "BaseSlot",
+					Name = "Slot (0 = Position)",
+					Default = 0,
+				},
+				Input40 = InstanceInput {
+					SourceOp = "Bar_BaseColor",
+					Page = "Style",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 2,
+					Default = 0.8823529411765,
+				},
+				Input41 = InstanceInput {
+					SourceOp = "Bar_BaseColor",
+					Page = "Style",
+					Source = "TopLeftGreen",
+					ControlGroup = 2,
+					Default = 0.8823529411765,
+				},
+				Input42 = InstanceInput {
+					SourceOp = "Bar_BaseColor",
+					Page = "Style",
+					Source = "TopLeftBlue",
+					ControlGroup = 2,
+					Default = 0.8823529411765,
+				},
+				Input43 = InstanceInput {
+					SourceOp = "Bar_BaseBorderColor",
+					Page = "Style",
+					Source = "TopLeftRed",
+					Name = "Border Color",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input44 = InstanceInput {
+					SourceOp = "Bar_BaseBorderColor",
+					Page = "Style",
+					Source = "TopLeftGreen",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input45 = InstanceInput {
+					SourceOp = "Bar_BaseBorderColor",
+					Page = "Style",
+					Source = "TopLeftBlue",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input46 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Image",
+					Source = "HdrImage",
+					Default = 1,
+				},
+				Input47 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Image",
+					Source = "UseImage",
+					Name = "Use Image",
+					Default = 1,
+				},
+				Input48 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Image",
+					Source = "ImageSize",
+					Name = "Size",
+					Default = 1,
+				},
+				Input49 = InstanceInput {
+					SourceOp = "Bar_GC",
+					Page = "Image",
+					Source = "ImageGap",
+					Name = "Offset Y (+ up / - down)",
+					Default = 0,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Bar_M4",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 0, 0 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 716, 280, 358, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Bar_GC = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.18, 0.4125 },
+							Expression = "Point(LeftMargin + (1 - LeftMargin - RightMargin)/Columns*(Position - 0.5), BottomMargin + (BarH - BottomExt)/2)",
+						},
+						Width = Input {
+							Value = 0.096,
+							Expression = "BarW",
+						},
+						Height = Input {
+							Value = 0.45,
+							Expression = "BarH + BottomExt",
+						},
+						CornerRadius = Input { Value = 0.3, },
+						BorderSize = Input { Value = 0.004, },
+						BarW = Input { Expression = "(1 - LeftMargin - RightMargin)/Columns*(1 - Padding)", },
+						BottomExt = Input { Expression = "BarW/2*comp:GetPrefs(\"Comp.FrameFormat.Width\")/comp:GetPrefs(\"Comp.FrameFormat.Height\")", },
+						BarH = Input { Expression = "(1 - TopMargin - BottomMargin)/(Max - Min)*(Value - Min)*Grow", },
+						LeftMargin = Input { Value = 0.1, },
+						RightMargin = Input { Value = 0.1, },
+						TopMargin = Input { Value = 0.15, },
+						BottomMargin = Input { Value = 0.25, },
+						Columns = Input { Value = 5, },
+						Position = Input { Value = 1, },
+						Padding = Input { Value = 0.4, },
+						Max = Input { Value = 100, },
+						Min = Input { Value = 0, },
+						Value = Input { Value = 75, },
+						Visibility = Input { Value = 1, },
+						TitleTime = Input { Value = 1, },
+						GraphTime = Input { Value = 4, },
+						TotalTime = Input { Expression = "BaseTime*Columns+TitleTime+GraphTime", },
+						Pop = Input { Expression = "(TitleTime <= 0) and ((Visibility >= BaseTime*Columns/TotalTime) and 1 or 0) or math.min(1, math.max(0, (Visibility - BaseTime*Columns/TotalTime)/(TitleTime/TotalTime)))", },
+						Grow = Input { Expression = "(Visibility <= (BaseTime*Columns/TotalTime + TitleTime/TotalTime)) and 0 or (Visibility >= 1) and 1 or 1 - (1 - (Visibility - BaseTime*Columns/TotalTime - TitleTime/TotalTime)/(GraphTime/TotalTime))^3", },
+						LabelScale = Input { Value = 0.55, },
+						LabelGap = Input { Value = 0.015, },
+						UseImage = Input { Value = 1, },
+						ImageSize = Input { Value = 1, },
+						ImageGap = Input { Value = 0, },
+						ShowBaseline = Input { Value = 1, },
+						BaseTime = Input { Value = 1, },
+						BaseGrow = Input { Expression = "(BaseTime <= 0) and 1 or math.min(1, math.max(0, Visibility*TotalTime/BaseTime - (BaseIdx - 1)))", },
+						BaseIdx = Input { Expression = "(BaseSlot >= 1) and BaseSlot or Position", },
+						BaseSlot = Input { Value = 0, },
+						BaseFull = Input { Value = 0, },
+						BaseAll = Input { Expression = "(BaseTime <= 0) and 1 or math.min(1, math.max(0, Visibility*TotalTime/(BaseTime*Columns)))", },
+						BaseThickness = Input { Value = 0.006, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, -16.5 } },
+					UserControls = ordered() {
+						HdrAnimation = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 4, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Animation" },
+						HdrValue = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 3, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Value" },
+						HdrLayout = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 7, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Layout" },
+						HdrBar = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 8, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Bar" },
+						HdrLabel = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 7, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Label" },
+						HdrImage = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 3, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Image" },
+						HdrBaseline = { LINKID_DataType = "Number", INPID_InputControl = "LabelControl", LBLC_DropDownButton = true, LBLC_NumInputs = 10, INP_Integer = false, INP_External = false, INP_Passive = true, INP_Default = 1, ICS_ControlPage = "Controls", LINKS_Name = "Baseline" },
+						LeftMargin = { INP_MaxAllowed = 0.5, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.5, INP_Default = 0.1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Left Margin" },
+						RightMargin = { INP_MaxAllowed = 0.5, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.5, INP_Default = 0.1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Right Margin" },
+						TopMargin = { INP_MaxAllowed = 0.5, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.5, INP_Default = 0.15, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Top Margin" },
+						BottomMargin = { INP_MaxAllowed = 0.9, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.5, INP_Default = 0.25, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Bottom Margin (baseline height)" },
+						Columns = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 20, INP_Default = 5, INP_MinScale = 1, INP_MinAllowed = 0.1, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Columns" },
+						Position = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 20, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Position (column)" },
+						Padding = { INP_MaxAllowed = 0.95, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.9, INP_Default = 0.4, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Padding (gap between bars)" },
+						Max = { INP_MaxAllowed = 100000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1000, INP_Default = 100, INP_MinScale = 0, INP_MinAllowed = -100000, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Max" },
+						Min = { INP_MaxAllowed = 100000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1000, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = -100000, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Min" },
+						Value = { INP_MaxAllowed = 100000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1000, INP_Default = 75, INP_MinScale = 0, INP_MinAllowed = -100000, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Value" },
+						Visibility = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = -10, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Visibility (keyframe 0 -> 1)" },
+						BaseTime = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Baseline Time (per column)" },
+						TitleTime = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Image Pop Up Time" },
+						GraphTime = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 4, INP_MinScale = 0, INP_MinAllowed = 0.001, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "GraphTime (bar grows)" },
+						TotalTime = { INP_MaxAllowed = 200, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 20, INP_Default = 5, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "TotalTime" },
+						Pop = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "Pop (title phase 0-1)" },
+						Grow = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "Grow (graph phase 0-1, eased)" },
+						LabelScale = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 2, INP_Default = 0.55, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Label Size (x bar width)" },
+						LabelGap = { INP_MaxAllowed = 0.5, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.1, INP_Default = 0.015, INP_MinScale = 0, INP_MinAllowed = -0.5, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Label Gap (above bar)" },
+						UseImage = { INP_MaxAllowed = 1, INP_Integer = true, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", ICS_ControlPage = "Controls", INP_Default = 1, LINKS_Name = "Use Image" },
+						ImageSize = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 3, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Image Size (x bar width)" },
+						ImageGap = { INP_MaxAllowed = 0.5, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.1, INP_Default = 0, INP_MinScale = -0.1, INP_MinAllowed = -0.5, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Image Offset Y (from baseline)" },
+						ShowBaseline = { INP_MaxAllowed = 1, INP_Integer = true, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", ICS_ControlPage = "Controls", INP_Default = 1, LINKS_Name = "Show Baseline" },
+						BaseFull = { INP_MaxAllowed = 1, INP_Integer = true, INP_MinAllowed = 0, LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", ICS_ControlPage = "Controls", INP_Default = 0, LINKS_Name = "Whole Line (draw the full baseline here)" },
+						BaseAll = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BaseAll (whole-line sweep 0-1)" },
+						BaseSlot = { INP_MaxAllowed = 100, INP_Integer = true, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Baseline Slot (0 = Position)" },
+						BaseIdx = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 10, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BaseIdx (slot this baseline segment uses)" },
+						BorderSize = { INP_MaxAllowed = 0.1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.02, INP_Default = 0.004, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Border Size" },
+						BarW = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BarW (outer, incl. border)" },
+						BottomExt = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BottomExt (hidden under baseline)" },
+						BarH = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BarH (outer, incl. border)" },
+						BaseGrow = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Calc", LINKS_Name = "BaseGrow (this segment 0-1)" },
+						BaseThickness = { INP_MaxAllowed = 0.1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.03, INP_Default = 0.006, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Baseline Thickness" }
+					}
+				},
+				Bar_BarColor = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bar_GC",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.0745098039216, },
+						TopLeftGreen = Input { Value = 0.1450980392157, },
+						TopLeftBlue = Input { Value = 0.6392156862745, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, -16.5 } },
+				},
+				Bar_BorderMask = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						BorderWidth = Input {
+							Value = 0.004,
+							Expression = "(Bar_GC.BarH > 0) and Bar_GC.BorderSize or 0",
+						},
+						Center = Input {
+							Value = { 0.18, 0.4125 },
+							Expression = "Bar_GC.Center",
+						},
+						Width = Input {
+							Value = 0.096,
+							Expression = "Bar_GC.Width",
+						},
+						Height = Input {
+							Value = 0.45,
+							Expression = "Bar_GC.Height",
+						},
+						CornerRadius = Input {
+							Value = 0.3,
+							Expression = "Bar_GC.CornerRadius",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, -82.5 } },
+				},
+				Bar_BorderColor = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bar_BorderMask",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.8823529411765, },
+						TopLeftGreen = Input { Value = 0.8823529411765, },
+						TopLeftBlue = Input { Value = 0.8823529411765, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, -82.5 } },
+				},
+				Bar_BarFill = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Bar_BorderColor",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_BarColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -165, -49.5 } },
+				},
+				Bar_BarShadow = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						Source = Input {
+							SourceOp = "Bar_BarFill",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 45, },
+						ShadowDistance = Input {
+							Value = 0.00576,
+							Expression = "Bar_GC.BarW*0.06",
+						},
+						shadowBlur = Input { Value = 0, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, -16.5 } },
+				},
+				Bar_Canvas = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, -82.5 } },
+				},
+				Bar_BarClip = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.5, 0.627 },
+							Expression = "Point(0.5, (1 + Cut)/2 + 0.5)",
+						},
+						Width = Input { Value = 4, },
+						Height = Input {
+							Value = 1.746,
+							Expression = "2 - Cut",
+						},
+						Cut = Input {
+							Value = 0.255,
+							Expression = "Bar_GC.BottomMargin + (Bar_GC.BaseThickness + Bar_GC.BorderSize)/2",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, -82.5 } },
+					UserControls = ordered() {
+						Cut = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0, INP_MinScale = 0, INP_MinAllowed = -1, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Cut Y (top of baseline)" }
+					}
+				},
+				Bar_M1 = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bar_BarClip",
+							Source = "Mask",
+						},
+						Background = Input {
+							SourceOp = "Bar_Canvas",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_BarShadow",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, -16.5 } },
+				},
+				Bar_Base = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.18, 0.25 },
+							Expression = "Point(Bar_GC.LeftMargin + (1 - Bar_GC.LeftMargin - Bar_GC.RightMargin)*((Bar_GC.BaseFull == 1) and Bar_GC.BaseAll/2 or (Bar_GC.BaseIdx - 1 + Bar_GC.BaseGrow/2)/Bar_GC.Columns), Bar_GC.BottomMargin)",
+						},
+						Width = Input {
+							Value = 0.16,
+							Expression = "(1 - Bar_GC.LeftMargin - Bar_GC.RightMargin)*((Bar_GC.BaseFull == 1) and Bar_GC.BaseAll or Bar_GC.BaseGrow/Bar_GC.Columns)",
+						},
+						Height = Input {
+							Value = 0.006,
+							Expression = "Bar_GC.BaseThickness",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 49.5 } },
+				},
+				Bar_BaseColor = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bar_Base",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 0.8823529411765, },
+						TopLeftGreen = Input { Value = 0.8823529411765, },
+						TopLeftBlue = Input { Value = 0.8823529411765, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 49.5 } },
+				},
+				Bar_BaseBorderMask = RectangleMask {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							Value = { 0.18, 0.25 },
+							Expression = "Bar_Base.Center",
+						},
+						Width = Input {
+							Value = 0.16,
+							Expression = "Bar_Base.Width",
+						},
+						Height = Input {
+							Value = 0.01,
+							Expression = "Bar_GC.BaseThickness + Bar_GC.BorderSize",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 82.5 } },
+				},
+				Bar_BaseBorderColor = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Bar_BaseBorderMask",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 82.5 } },
+				},
+				Bar_BaseFill = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Bar_BaseBorderColor",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_BaseColor",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 82.5 } },
+				},
+				Bar_M2 = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 1,
+							Expression = "Bar_GC.ShowBaseline",
+						},
+						Background = Input {
+							SourceOp = "Bar_M1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_BaseFill",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 49.5 } },
+				},
+				Bar_Label = TextPlus {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input {
+							Value = { 0.18, 0.715 },
+							Expression = "Point(Bar_GC.Center.X, Bar_GC.BottomMargin + Bar_GC.BarH + Bar_GC.LabelGap)",
+						},
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Red1 = Input { Value = 0.8823529411765, },
+						Green1 = Input { Value = 0.8823529411765, },
+						Blue1 = Input { Value = 0.8823529411765, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input {
+							Value = "75.0%",
+							Expression = "(AutoValue == 1) and (string.format(\"%.1f%%\", Bar_GC.Value*Bar_GC.Grow)) or ManualText",
+						},
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input {
+							Value = 0.0528,
+							Expression = "Bar_GC.BarW*Bar_GC.LabelScale",
+						},
+						VerticalTopCenterBottom = Input { Value = 1, },
+						HorizontalLeftCenterRight = Input { Value = 0, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						AutoValue = Input { Value = 1, },
+						ManualText = Input { Value = "Hello", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 115.5 } },
+					UserControls = ordered() {
+						AutoValue = { LINKS_Name = "Auto Value (count up %)", LINKID_DataType = "Number", INPID_InputControl = "CheckboxControl", ICS_ControlPage = "Controls", INP_Default = 1, },
+						ManualText = { LINKID_DataType = "Text", LINKS_Name = "Label Text (when Auto Value off)", INPID_InputControl = "TextEditControl", ICS_ControlPage = "Controls", TEC_Lines = 2, INP_Default = "Hello", }
+					}
+				},
+				Bar_LabelStroke = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						Source = Input {
+							SourceOp = "Bar_Label",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 20, },
+						ShadowDistance = Input {
+							Value = 0.004224,
+							Expression = "FontValue*Bar_Label.Size/0.1",
+						},
+						shadowBlur = Input { Value = 0, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", },
+						FontValue = Input { Value = 0.008, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 115.5 } },
+					UserControls = ordered() {
+						FontValue = { INP_MaxAllowed = 100, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 0.05, INP_Default = 0.008, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Stroke Thickness" }
+					}
+				},
+				Bar_M3 = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 1,
+							Expression = "math.min(1, math.max(0, (Bar_GC.Visibility - (Bar_GC.BaseTime*Bar_GC.Columns + Bar_GC.TitleTime)/Bar_GC.TotalTime)/(Bar_GC.GraphTime/Bar_GC.TotalTime/8)))",
+						},
+						Background = Input {
+							SourceOp = "Bar_M2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_LabelStroke",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 115.5 } },
+				},
+				Bar_ImgCanvas = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 181.5 } },
+				},
+				Bar_EmptyImage = Background {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 64, },
+						Height = Input { Value = 64, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -440, 214.5 } },
+				},
+				Bar_ImgSlot = Dissolve {
+					Transitions = {
+						[0] = "DFTDissolve"
+					},
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Mix = Input {
+							Value = 1,
+							Expression = "Bar_GC.UseImage",
+						},
+						Background = Input {
+							SourceOp = "Bar_EmptyImage",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -330, 214.5 } },
+				},
+				Bar_ImgPlace = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Bar_ImgCanvas",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_ImgSlot",
+							Source = "Output",
+						},
+						Center = Input {
+							Value = { 0.18, 0.25 },
+							Expression = "Point(Bar_GC.Center.X, Bar_GC.BottomMargin + Bar_GC.ImageGap)",
+						},
+						Size = Input {
+							Value = 1,
+							Expression = "Bar_GC.BarW*Bar_GC.ImageSize*Background.Width/Foreground.Width",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -220, 181.5 } },
+				},
+				Bar_ImgShadow = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						refreshTrigger = Input {
+							Value = Number {
+								Value = 1
+							},
+						},
+						Source = Input {
+							SourceOp = "Bar_ImgPlace",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 45, },
+						ShadowDistance = Input {
+							Value = 0.00518,
+							Expression = "Bar_GC.BarW*Bar_GC.ImageSize*0.06",
+						},
+						shadowBlur = Input { Value = 0, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 181.5 } },
+				},
+				Bar_ImgPop = Transform {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Center = Input { Value = { 0.5, 0.5 }, },
+						Pivot = Input {
+							Value = { 0.18, 0.15 },
+							Expression = "Bar_ImgPlace.Center",
+						},
+						Size = Input {
+							Value = 1,
+							Expression = "Pop < 0 and 0\nor Pop <= 0.5 and (Pop / 0.5) * 1.2\nor Pop <= 0.75 and 1.2 - ((Pop - 0.5) / 0.25) * 0.3\nor Pop <= 1 and 0.9 + ((Pop - 0.75) / 0.25) * 0.1\nor 1",
+						},
+						Input = Input {
+							SourceOp = "Bar_ImgShadow",
+							Source = "Output",
+						},
+						Pop = Input {
+							Value = 1,
+							Expression = "Bar_GC.Pop",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -110, 214.5 } },
+					UserControls = ordered() {
+						Pop = { INP_MaxAllowed = 10, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = -10, LINKID_DataType = "Number", ICS_ControlPage = "Controls", LINKS_Name = "Pop" }
+					}
+				},
+				Bar_M4 = Merge {
+					CtrlWZoom = false,
+					NameSet = true,
+					Inputs = {
+						Blend = Input {
+							Value = 1,
+							Expression = "Bar_GC.UseImage",
+						},
+						Background = Input {
+							SourceOp = "Bar_M3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Bar_ImgPop",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 181.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "V_BarGraph"
+}
